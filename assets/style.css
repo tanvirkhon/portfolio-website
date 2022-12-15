@@ -1,16 +1,21 @@
 /*********************************** 
 Whole Document Styles 
 ***********************************/
+@font-face {
+  font-family: AncientModernTales-a7Po;
+  src: url(./fonts/AncientModernTales-a7Po.ttf);
+}
 
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
     margin: 0;
     padding: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: brown;
+    background-color: #d2a5d2;
 }
 
 /*********************************** 
@@ -23,15 +28,16 @@ header{
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    background-color: brown;
+    background-color: #340434;
 }
 
 header h1{
-    color: grey;
-    background-color: #000;
+    color: #f9d2f9;
     padding: 5px 1% 5px 6%;
     margin: 0;
-    font-size: 3vw;
+    font-size: 4vw;
+    font-family: AncientModernTales-a7Po;
+    text-transform: capitalize;
 }
 
 nav{
@@ -51,17 +57,23 @@ ul > li{
 nav a {
     text-decoration: none;
     position: relative;
-    box-shadow: inset 0 0 0 0 black;
-    color: black;
+    color: #fff;
     margin: 0 -.25rem;
     padding: 0 .25rem;
-    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-    font-size: 1.4em;
+    font-family: AncientModernTales-a7Po;
+    font-size: 1.8em;
   }
 
-  a:hover {
-    box-shadow: inset 100px 0 0 0 black;
-    color: white;
+  ul li a::before {
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+
+  ul li a:hover {
+    color: #ffee10;
+    text-shadow: 0 0 5px #ffee10;
   }
 
 /*********************************** 
@@ -69,26 +81,42 @@ Hero Section
 ***********************************/
 
 #hero-section{
-    background: rgb(68,88,120);
+    display: flexbox;
+    background: #5b305c;
+    image-rendering: pixelated;
     background-image: url(./img/dungeon_background.jpg);
-    background-size: contain;
-    background-position: center;
+    background-size: 55%;
     background-blend-mode: soft-light;
-    min-height: 30vh;
+    min-height: 38vh;
+    padding-top:200px;
     display: flex-end;
     text-align: center;
-    color: white;
-    padding-bottom: 15px;
-   
+    animation: slide 25s linear infinite;
+}
+/* Adds animated movement to hero section */
+@keyframes slide {
+  from { background-position: left bottom; }
+  to { background-position: 100% bottom; }
 }
 
 #hero-section h2{
-    background-color: grey;
+    background-color: #f9d2f9;
     color: black;
     margin: 0;
     padding: 5px 10px;
-    font-size: 2.3rem;
+    font-family: AncientModernTales-a7Po;
+    font-size: 3rem;
     line-height: 1.2;
+}
+
+.blink_animation {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 50%;
+  }
 }
 
 /*********************************** 
@@ -126,11 +154,16 @@ Main Section
   
   .page-section p {
     margin-bottom: 20px;
+    font-size: 20px;
   }
 
 /*********************************** 
 My Projects Section
 ***********************************/
+main h2 {
+  font-family: AncientModernTales-a7Po;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -166,14 +199,16 @@ My Projects Section
 }
 
 .flex-item div {
-  background-color: var(--secondary);
+  background-color: #5b305c;
   padding: 8px 10px;
 }
 
 .flex-item h3 {
   font-size: 1.6rem;
+   font-family: AncientModernTales-a7Po;
 }
 
+/* Background Images for my work section */
 .hord-gold {
     background-image: url("./img/Dungeon.jpg");
     background-size: cover;
