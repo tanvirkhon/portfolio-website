@@ -1,6 +1,7 @@
 /*********************************** 
 Whole Document Styles 
 ***********************************/
+
 @font-face {
   font-family: AncientModernTales-a7Po;
   src: url(./fonts/AncientModernTales-a7Po.ttf);
@@ -56,7 +57,8 @@ nav a {
     font-size: 2.2em;
   }
 
-  /* Hover effect on nav links */
+/* Hover effect on nav links */
+
 nav ul li a::before {
     background: #ffee10;
     transition: .5s;
@@ -87,6 +89,7 @@ Hero Section
 }
 
 /* Adds animated movement to hero section */
+
 @keyframes slide {
   from { background-position: left bottom; }
   to { background-position: 100% bottom; }
@@ -104,6 +107,8 @@ Hero Section
     border-style: outset;
 }
 
+/* Adds flame animation to hero banner */
+
 .blink_animation {
   animation: blinker 3s linear infinite;
 }
@@ -117,6 +122,9 @@ Hero Section
 /*********************************** 
 Main Section
 ***********************************/
+main h2 {
+  font-family: AncientModernTales-a7Po;
+}
 
 .page-wrapper {
     max-width: 88%;
@@ -155,41 +163,37 @@ Main Section
 /*********************************** 
 My Projects Section
 ***********************************/
-main h2 {
-  font-family: AncientModernTales-a7Po;
-}
 
-.flex-container {
+.my-work-div {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .flex-item {
-    border: 10px solid  #5b305c;
-    border-style:outset;
-    border-radius: 5px;
-    background-color: #5b305c;
-    color: #f9d2f9;
-    min-height: 150px;
-    max-height: 150px;
-    flex-basis: calc(50% - 1em);
-    display: flex;
-    align-items: flex-end;
-    padding: 0 0 20px 0;
-    margin: 0.5em;
-    text-decoration: none;
-    background-blend-mode: soft-light;
-    background-size: 150%;
-    transition: all 0.5s;
-    font-size: 1rem;
-
-  }
+.flex-item {
+  border: 10px solid  #5b305c;
+  border-style: outset;
+  border-radius: 5px;
+  background-color: #5b305c;
+  color: #f9d2f9;
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 1rem;
+}
   
-  /* feature first portfolio item */
-.flex-item:first-child {
-    min-height: 400px;
-    flex-basis: 100%;
+/* feature first portfolio item */
+#main-project {
+  min-height: 400px;
+  flex-basis: 100%;
 }
 
 .flex-item:hover {
@@ -209,14 +213,9 @@ main h2 {
 }
 
 /* Background Images for my work section */
-.hord-gold {
-    background-image: url("./img/cfh-website.jpg");
-    background-size:cover;
-    background-position: center;
-  }
 
 .cfh-website{
-    background-image: url("./img/Dungeon.jpg");
+    background-image: url("./img/cfh-website.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -225,6 +224,23 @@ main h2 {
     background-image: url("./img/khs-website.png");
     background-size: cover;
     background-position: center;
+}
+
+.onechild-website{
+  background-image: url("./img/one-child-logo.png");
+  background-size: cover;
+  background-position: center;
+}
+.week_one_challenge{
+  background-image: url("./img/search-engine-optimization.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.nft{
+  background-image: url("./img/Dungeon.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 /*********************************** 
@@ -250,7 +266,7 @@ Contact Me Section
   border-style: outset;
 }
 
-  /* Hover effect on nav links */
+/* Hover effect on contact links */
 #contact-me a::before {
     background: #ffee10;
     transition: .5s;
