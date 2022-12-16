@@ -14,13 +14,14 @@ Whole Document Styles
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Sans', Arial, sans-serif;
     background-color: #d2a5d2;
 }
 
 /*********************************** 
 Header & Navigation
 ***********************************/
+
 header{
     padding: 15px 6% 15px 0;
     display: flex;
@@ -29,49 +30,41 @@ header{
     flex-wrap: wrap;
     align-items: center;
     background-color: #340434;
+    border: 10px solid  #5b305c;
+    border-style: outset;
 }
 
 header h1{
     color: #f9d2f9;
     padding: 5px 1% 5px 6%;
     margin: 0;
-    font-size: 4vw;
+    font-size: 4em;
     font-family: AncientModernTales-a7Po;
-    text-transform: capitalize;
 }
 
-nav{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-ul > li{
+nav ul > li{
     list-style-type: none;
     display: inline-block;
     padding: 5px 10px;
-    margin-right: 10px;
-    line-height: 2px;
+    margin: 5px;
 }
 
 nav a {
     text-decoration: none;
-    position: relative;
-    color: #fff;
-    margin: 0 -.25rem;
-    padding: 0 .25rem;
+    color: #f9d2f9;
     font-family: AncientModernTales-a7Po;
-    font-size: 1.8em;
+    font-size: 2.2em;
   }
 
-  ul li a::before {
+  /* Hover effect on nav links */
+nav ul li a::before {
     background: #ffee10;
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
   }
 
-  ul li a:hover {
+nav ul li a:hover {
     color: #ffee10;
     text-shadow: 0 0 5px #ffee10;
   }
@@ -85,14 +78,14 @@ Hero Section
     background: #5b305c;
     image-rendering: pixelated;
     background-image: url(./img/dungeon_background.jpg);
-    background-size: 55%;
+    overflow: hidden;
     background-blend-mode: soft-light;
-    min-height: 38vh;
-    padding-top:200px;
+    padding-top:250px;
     display: flex-end;
     text-align: center;
-    animation: slide 25s linear infinite;
+    animation: slide 30s linear infinite;
 }
+
 /* Adds animated movement to hero section */
 @keyframes slide {
   from { background-position: left bottom; }
@@ -105,8 +98,10 @@ Hero Section
     margin: 0;
     padding: 5px 10px;
     font-family: AncientModernTales-a7Po;
-    font-size: 3rem;
+    font-size: 2.5em;
     line-height: 1.2;
+    border: 10px solid  #5b305c;
+    border-style: outset;
 }
 
 .blink_animation {
@@ -142,12 +137,12 @@ Main Section
   .page-section > h2 {
     flex: 0 0 20%;
     text-align: right;
-    padding-right: 15px;
-    border-right: 4px solid black;
-    font-size: 3vw;
-    line-height: 1.1;
-  }
+    padding-right: 25px;
+    border-right: 10px double black;
+    font-size: 3.5vw;
 
+  }
+  
   .page-section > div {
     flex: 0 0 77%;
   }
@@ -171,9 +166,11 @@ main h2 {
   }
 
   .flex-item {
-    border: 5px solid grey;
-    background-color: grey;
-    color: grey;
+    border: 10px solid  #5b305c;
+    border-style:outset;
+    border-radius: 5px;
+    background-color: #5b305c;
+    color: #f9d2f9;
     min-height: 150px;
     max-height: 150px;
     flex-basis: calc(50% - 1em);
@@ -185,9 +182,10 @@ main h2 {
     background-blend-mode: soft-light;
     background-size: 150%;
     transition: all 0.5s;
-    font-size: 0.9rem;
-  }
+    font-size: 1rem;
 
+  }
+  
   /* feature first portfolio item */
 .flex-item:first-child {
     min-height: 400px;
@@ -195,27 +193,30 @@ main h2 {
 }
 
 .flex-item:hover {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #340434;
 }
 
 .flex-item div {
   background-color: #5b305c;
-  padding: 8px 10px;
+  padding: 8px 15px;
+  border: 5px solid #f9d2f9;
+  border-style: outset;
+
 }
 
 .flex-item h3 {
-  font-size: 1.6rem;
-   font-family: AncientModernTales-a7Po;
+  font-size: .8em;
 }
 
 /* Background Images for my work section */
 .hord-gold {
-    background-image: url("./img/Dungeon.jpg");
-    background-size: cover;
+    background-image: url("./img/cfh-website.jpg");
+    background-size:cover;
+    background-position: center;
   }
 
 .cfh-website{
-    background-image: url("./img/cfh-website.jpg");
+    background-image: url("./img/Dungeon.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -225,3 +226,39 @@ main h2 {
     background-size: cover;
     background-position: center;
 }
+
+/*********************************** 
+Contact Me Section
+***********************************/
+
+#contact-me address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+#contact-me address a {
+  text-decoration: none;
+  color: #f9d2f9;
+  font-family: AncientModernTales-a7Po;
+  font-size: 2em;
+  background-color: #340434;
+  padding: 5px;
+  border: 10px solid #5b305c;
+  border-style: outset;
+}
+
+  /* Hover effect on nav links */
+#contact-me a::before {
+    background: #ffee10;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+
+#contact-me a:hover {
+    color: #ffee10;
+    text-shadow: 0 0 5px #ffee10;
+  }
