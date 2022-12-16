@@ -24,7 +24,7 @@ With these criterias in mind I created a wireframe of the website before I bagan
 
 And this is the final product :
 
-https://tanvirkhon.github.io/week_one_challenge
+https://tanvirkhon.github.io/portfolio-website/
 
 ## Installation
 
