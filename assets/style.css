@@ -213,6 +213,11 @@ My Projects Section
 }
 
 /* Background Images for my work section */
+.target-website{
+  background-image: url("./img/target-app.png");
+  background-size: cover;
+  background-position: center;
+}
 
 .cfh-website{
     background-image: url("./img/cfh-website.jpg");
@@ -228,11 +233,6 @@ My Projects Section
 
 .onechild-website{
   background-image: url("./img/one-child-logo.png");
-  background-size: cover;
-  background-position: center;
-}
-.week_one_challenge{
-  background-image: url("./img/search-engine-optimization.jpg");
   background-size: cover;
   background-position: center;
 }
